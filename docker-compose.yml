@@ -1,15 +1,13 @@
 version: '3.8'
 
 services:
-  postgres:
-    container_name: nest-clean-pg
+  nest-rocketseat:
+    container_name: nest-rocketseat-pg
     image: 'postgres'
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: nest-clean
-      PGDATA: /data/postgres
+
     ports:
       - '5432:5432'
-    volumes:
-      - ./data/pg:/data/postgres
